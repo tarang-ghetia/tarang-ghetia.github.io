@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2749c9"/>
+      <stop offset="1" stop-color="#0e7490"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="30%" r="60%">
+      <stop offset="0" stop-color="#2749c9" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#2749c9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#f6f7f9"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g stroke="#191c22" stroke-opacity="0.05" stroke-width="1">
+    <path d="M0 210h1200M0 420h1200M300 0v630M600 0v630M900 0v630"/>
+  </g>
+  <text x="90" y="250" font-family="'IBM Plex Mono',monospace" font-size="30" fill="#2749c9" letter-spacing="4">ROBOTICS · REINFORCEMENT LEARNING</text>
+  <text x="86" y="365" font-family="'Times New Roman',Times,serif" font-weight="600" font-size="96" fill="#191c22">Tarang Ghetia.</text>
+  <text x="90" y="432" font-family="'IBM Plex Sans',sans-serif" font-size="32" fill="#474d58">M.Sc. Robotic Systems Engineering · RWTH Aachen</text>
+  <rect x="90" y="470" width="140" height="6" rx="3" fill="url(#g)"/>
+  <text x="90" y="540" font-family="'IBM Plex Mono',monospace" font-size="23" fill="#6b727e">7 publications   ·   3 patents   ·   RWTH &amp; ISRO</text>
+</svg>

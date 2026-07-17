@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark light" />
+  <script>(function(){try{var t=localStorage.getItem("theme");document.documentElement.setAttribute("data-theme",t==="light"?"light":"dark");}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();</script>
+  <title>Tarang Ghetia — Robotics & Reinforcement Learning</title>
+  <meta name="description" content="Tarang Ghetia — Master's student in Robotic Systems Engineering at RWTH Aachen. I work on perception, deep learning and reinforcement learning for robots. 7 publications, 3 patents, research at RWTH & ISRO." />
+  <meta name="author" content="Tarang Ghetia" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Tarang Ghetia — Robotics & Reinforcement Learning" />
+  <meta property="og:description" content="M.Sc. Robotic Systems Engineering @ RWTH Aachen. Perception, deep learning and RL for robots in the real world." />
+  <meta property="og:image" content="assets/og-image.svg" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts: preconnect + swap for fast, non-blocking load -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <noscript><style>.hero__name{opacity:1 !important}</style></noscript>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tarang Ghetia",
+    "jobTitle": "Robotics & Reinforcement Learning Engineer",
+    "email": "mailto:ghetiat@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Aachen", "addressCountry": "DE" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "RWTH Aachen University" },
+      { "@type": "CollegeOrUniversity", "name": "Pandit Deendayal Energy University" }
+    ],
+    "worksFor": { "@type": "Organization", "name": "RWTH Aachen University — ANTS Lab" },
+    "knowsAbout": ["Reinforcement Learning", "Robotics", "Deep Learning", "Computer Vision", "Perception", "Sim-to-Real"],
+    "sameAs": [
+      "https://github.com/tarang-ghetia",
+      "https://www.linkedin.com/in/tarang-ghetia-7703731a8/"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#hero" class="nav__brand" aria-label="Tarang Ghetia — home">
+        <span class="nav__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="8" width="16" height="11" rx="2"/><path d="M12 8V4"/><circle cx="12" cy="3" r="1.4" fill="currentColor" stroke="none"/><path d="M9 13h.01M15 13h.01"/><path d="M9 16h6"/>
+          </svg>
+        </span>
+        <span class="nav__name">Tarang&nbsp;Ghetia</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#rl-demo">Demo</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch to light theme">
+          <svg class="tt-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="tt-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        </button>
+        <a class="btn btn--ghost" href="Tarang_Ghetia_CV_Optimized_website.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg>
+          CV
+        </a>
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#rl-demo">Demo</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn--primary" href="Tarang_Ghetia_CV_Optimized_website.pdf" target="_blank" rel="noopener">Download CV</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <canvas class="hero__canvas" id="fieldCanvas" aria-hidden="true"></canvas>
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__glow" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <p class="hero__kicker reveal" data-reveal>
+          <span class="status-dot" aria-hidden="true"></span>
+          HiWi @ RWTH Aachen · Looking for robotics &amp; RL roles
+        </p>
+
+        <div class="hero__namewrap">
+          <svg class="hero__arm" id="armSvg" aria-hidden="true"></svg>
+          <h1 class="hero__name" id="heroName" aria-label="Tarang Ghetia."><span aria-hidden="true">Tarang Ghetia.</span></h1>
+        </div>
+
+        <p class="hero__role reveal" data-reveal>
+          I build robots that
+          <span class="grad">see, learn, and act.</span>
+        </p>
+
+        <p class="hero__lead reveal" data-reveal>
+          Master's student in Robotic Systems Engineering at RWTH Aachen.
+          My background is in deep learning and computer vision; right now
+          I'm putting most of my energy into <span class="hl">reinforcement learning</span>
+          and getting robots to work outside of simulation.
+        </p>
+
+        <div class="hero__cta reveal" data-reveal>
+          <a class="btn btn--primary" href="#projects">
+            See my work
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#contact">Get in touch</a>
+        </div>
+
+        <ul class="hero__meta reveal" data-reveal>
+          <li><span class="mono">M.Sc.</span> Robotic Systems Engineering</li>
+          <li><span class="mono">7</span> publications</li>
+          <li><span class="mono">3</span> patents filed</li>
+          <li><span class="mono">RWTH &amp; ISRO</span> research</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ FOCUS STRIP (marquee) ============ -->
+    <section class="focus" id="focus" aria-label="Focus areas">
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track" id="marqueeTrack">
+          <span>Reinforcement Learning</span><i>◇</i>
+          <span>Robot Perception</span><i>◇</i>
+          <span>Sim-to-Real</span><i>◇</i>
+          <span>Deep Learning</span><i>◇</i>
+          <span>Computer Vision</span><i>◇</i>
+          <span>Semantic Segmentation</span><i>◇</i>
+          <span>Embodied AI</span><i>◇</i>
+          <span>Control &amp; Estimation</span><i>◇</i>
+          <span>Reinforcement Learning</span><i>◇</i>
+          <span>Robot Perception</span><i>◇</i>
+          <span>Sim-to-Real</span><i>◇</i>
+          <span>Deep Learning</span><i>◇</i>
+          <span>Computer Vision</span><i>◇</i>
+          <span>Semantic Segmentation</span><i>◇</i>
+          <span>Embodied AI</span><i>◇</i>
+          <span>Control &amp; Estimation</span><i>◇</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section__head reveal" data-reveal>
+          <span class="eyebrow"><span class="eyebrow__num">01</span> About</span>
+          <h2 class="section__title">From computer vision<br/>to robot learning.</h2>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__lead reveal" data-reveal>
+            <p>
+              I build systems that help machines <strong>see and make decisions</strong>.
+              Before moving to Aachen for my Master's, I spent two years as a research
+              assistant and did a stint at <strong>ISRO</strong>, where I worked on deep
+              learning for satellite imagery — real, noisy data where mistakes actually matter.
+            </p>
+            <p>
+              Most of my hands-on work so far is in vision and forecasting: segmentation,
+              tracking, generative models, time series. What I want to do next is
+              <strong>reinforcement learning and control</strong> — closing the loop from
+              perception to action on real robots.
+            </p>
+            <p class="about__signature mono">— working on robots that learn from experience.</p>
+          </div>
+
+          <aside class="about__facts reveal" data-reveal>
+            <div class="fact">
+              <span class="fact__label mono">Currently</span>
+              <span class="fact__value">M.Sc. Robotic Systems Engineering</span>
+              <span class="fact__sub">RWTH Aachen</span>
+            </div>
+            <div class="fact">
+              <span class="fact__label mono">Focus</span>
+              <span class="fact__value">RL · Perception · Sim-to-Real</span>
+              <span class="fact__sub">From DL research to embodied control</span>
+            </div>
+            <div class="fact">
+              <span class="fact__label mono">Location</span>
+              <span class="fact__value">Aachen, Germany</span>
+              <span class="fact__sub">Open to relocating within the EU</span>
+            </div>
+            <div class="fact">
+              <span class="fact__label mono">Languages</span>
+              <span class="fact__value">English C1 · German A1.2</span>
+              <span class="fact__sub">Hindi · Gujarati</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="section stats" aria-label="Impact at a glance">
+      <div class="container">
+        <div class="stats__grid">
+          <div class="stat reveal" data-reveal>
+            <span class="stat__num" data-count="7" data-suffix="">0</span>
+            <span class="stat__label">Publications<br/><em>5 published · 2 under review</em></span>
+          </div>
+          <div class="stat reveal" data-reveal>
+            <span class="stat__num" data-count="3" data-suffix="">0</span>
+            <span class="stat__label">Patents filed<br/><em>+ 1 design certificate</em></span>
+          </div>
+          <div class="stat reveal" data-reveal>
+            <span class="stat__num" data-count="97" data-suffix="%">0</span>
+            <span class="stat__label">Segmentation accuracy<br/><em>U-Net @ ISRO · 38-Cloud</em></span>
+          </div>
+          <div class="stat reveal" data-reveal>
+            <span class="stat__num" data-count="9.83" data-decimals="2" data-suffix="">0</span>
+            <span class="stat__label">B.Tech CGPA<br/><em>Top 7 in my department</em></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESEARCH / PUBLICATIONS ============ -->
+    <section class="section research" id="research">
+      <div class="container">
+        <div class="section__head reveal" data-reveal>
+          <span class="eyebrow"><span class="eyebrow__num">02</span> Research</span>
+          <h2 class="section__title">Publications &amp; peer-reviewed research</h2>
+          <p class="section__desc">Seven papers so far, spread across medical AI, remote sensing,
+            forensics and agriculture — from classical machine learning up to transformers and generative models.</p>
+        </div>
+
+        <div class="filter reveal" data-reveal role="tablist" aria-label="Filter publications">
+          <button class="filter__btn is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter__btn" data-filter="journal" role="tab" aria-selected="false">Journals</button>
+          <button class="filter__btn" data-filter="conference" role="tab" aria-selected="false">Conferences</button>
+          <button class="filter__btn" data-filter="review" role="tab" aria-selected="false">Under review</button>
+        </div>
+
+        <ul class="pub-list" id="pubList">
+          <li class="pub reveal" data-reveal data-type="journal">
+            <div class="pub__main">
+              <h3 class="pub__title">Effective Heart Disease Prediction Using Machine Learning Techniques</h3>
+              <p class="pub__venue">Algorithms · MDPI</p>
+            </div>
+            <div class="pub__meta">
+              <span class="tag tag--ok">Published</span>
+              <a class="pub__doi mono" href="https://doi.org/10.3390/a16020088" target="_blank" rel="noopener">DOI ↗</a>
+            </div>
+          </li>
+          <li class="pub reveal" data-reveal data-type="conference">
+            <div class="pub__main">
+              <h3 class="pub__title">Automated Cervical Cancer Prediction using Ensemble Machine-Learning Approaches</h3>
+              <p class="pub__venue">IEEE ICRASET-2023</p>
+            </div>
+            <div class="pub__meta">
+              <span class="tag tag--ok">Published</span>
+              <a class="pub__doi mono" href="https://doi.org/10.1109/ICRASET59632.2023.10420051" target="_blank" rel="noopener">DOI ↗</a>
+            </div>
+          </li>
+          <li class="pub reveal" data-reveal data-type="conference">
+            <div class="pub__main">
+              <h3 class="pub__title">Early Prediction of Down Syndrome using Deep Transfer-Learning Approaches</h3>
+              <p class="pub__venue">ICNGCIS'23 · Taylor &amp; Francis</p>
+            </div>
+            <div class="pub__meta">
+              <span class="tag tag--ok">Published</span>
+              <a class="pub__doi mono" href="https://doi.org/10.1201/9781003466383" target="_blank" rel="noopener">DOI ↗</a>
+            </div>
+          </li>
+          <li class="pub reveal" data-reveal data-type="conference">
+            <div class="pub__main">
+              <h3 class="pub__title">A Novel Approach to Glass Identification using Ensemble Learning for Forensics</h3>
+              <p class="pub__venue">ICNGCIS'23 · Taylor &amp; Francis</p>
+            </div>
+            <div class="pub__meta">
+              <span class="tag tag--ok">Published</span>
+              <a class="pub__doi mono" href="https://doi.org/10.1201/9781003466383" target="_blank" rel="noopener">DOI ↗</a>
+            </div>
+          </li>
+          <li class="pub reveal" data-reveal data-type="conference">
+            <div class="pub__main">
+              <h3 class="pub__title">Automated Fungi Classification using Deep Learning with Explainable AI</h3>
+              <p class="pub__venue">IEEE · IndiaCom 2025</p>
+            </div>
+            <div class="pub__meta">
+              <span class="tag tag--ok">Published</span>
+              <a class="pub__doi mono" href="https://doi.org/10.23919/INDIACom66777.2025.11115260" target="_blank" rel="noopener">DOI ↗</a>
+            </div>
+          </li>
+          <li class="pub reveal" data-reveal data-type="review">
+            <div class="pub__main">
+              <h3 class="pub__title">A Comprehensive &amp; Systematic Study in Crop-Health Prediction using Machine Learning</h3>
+              <p class="pub__venue">Journal of Agriculture &amp; Food Research · Elsevier</p>
+            </div>
+            <div class="pub__meta">
+              <span class="tag tag--pending">Under review</span>
+            </div>
+          </li>
+          <li class="pub reveal" data-reveal data-type="review">
+            <div class="pub__main">
+              <h3 class="pub__title">Soil-Quality Analysis &amp; Crop-Yield Prediction using Machine-Learning Algorithms</h3>
+              <p class="pub__venue">Crop Design · Elsevier</p>
+            </div>
+            <div class="pub__meta">
+              <span class="tag tag--pending">Under review</span>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Patents -->
+        <div class="patents">
+          <h3 class="patents__title reveal" data-reveal>
+            <span class="mono">IP</span> Patents &amp; design certification
+          </h3>
+          <div class="patents__grid">
+            <article class="patent reveal" data-reveal>
+              <span class="patent__no mono">202321073458</span>
+              <p class="patent__title">AI &amp; Machine Learning: The New Frontier in Drug Discovery &amp; Development</p>
+              <span class="tag tag--pending">Filed · pending</span>
+            </article>
+            <article class="patent reveal" data-reveal>
+              <span class="patent__no mono">202321076113</span>
+              <p class="patent__title">Blockchain-Enabled Intelligent Surveillance System with AI &amp; IoT in Healthcare</p>
+              <span class="tag tag--pending">Filed · pending</span>
+            </article>
+            <article class="patent reveal" data-reveal>
+              <span class="patent__no mono">202321078056</span>
+              <p class="patent__title">Intelligent Early Forecasting of Air-Quality &amp; Pollution with an Advanced Alert System</p>
+              <span class="tag tag--pending">Filed · pending</span>
+            </article>
+            <article class="patent patent--cert reveal" data-reveal>
+              <span class="patent__no mono">DESIGN</span>
+              <p class="patent__title">AI-Enabled Robot for UV-C Disinfection</p>
+              <span class="tag tag--ok">Certified</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section__head reveal" data-reveal>
+          <span class="eyebrow"><span class="eyebrow__num">03</span> Projects</span>
+          <h2 class="section__title">Selected projects</h2>
+          <p class="section__desc">A few things I've built end to end — mostly perception and
+            prediction, all measured against proper baselines.</p>
+        </div>
+
+        <div class="proj-grid">
+          <article class="proj reveal" data-reveal>
+            <div class="proj__top">
+              <span class="proj__index mono">01</span>
+              <a class="proj__repo" href="https://github.com/tarang-ghetia/Object-Tracking" target="_blank" rel="noopener" aria-label="View the object-tracking repository on GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 8.4 22.9c.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17 5 18 5.3 18 5.3c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6A11.5 11.5 0 0 0 12 .5Z"/></svg>
+              </a>
+            </div>
+            <div class="proj__media" aria-hidden="true">
+              <svg viewBox="0 0 400 150" preserveAspectRatio="xMidYMid slice">
+                <defs><linearGradient id="pm1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e1220"/><stop offset="1" stop-color="#12151d"/></linearGradient></defs>
+                <rect width="400" height="150" fill="url(#pm1)"/>
+                <g stroke="rgba(255,255,255,.05)"><path d="M0 50h400M0 100h400M100 0v150M200 0v150M300 0v150"/></g>
+                <path d="M40 122 C120 92 180 66 260 72 S360 44 384 32" fill="none" stroke="#22d3ee" stroke-opacity=".55" stroke-dasharray="3 6" stroke-width="1.5"/>
+                <g fill="none" stroke="#5b8cff" stroke-width="2">
+                  <rect x="60" y="72" width="54" height="46" rx="3"/><rect x="198" y="46" width="50" height="42" rx="3"/><rect x="300" y="20" width="46" height="40" rx="3"/>
+                </g>
+                <g fill="#5b8cff"><circle cx="87" cy="95" r="2.5"/><circle cx="223" cy="67" r="2.5"/><circle cx="323" cy="40" r="2.5"/></g>
+                <g fill="#5b8cff" font-family="'IBM Plex Mono',monospace" font-size="9"><text x="62" y="68">id·1</text><text x="200" y="42">id·2</text><text x="302" y="16">id·3</text></g>
+              </svg>
+            </div>
+            <h3 class="proj__title">Real-Time Object Tracking</h3>
+            <p class="proj__desc">YOLOv3 detections fed into Deep&nbsp;SORT to track multiple objects
+              through live video — the kind of perception a mobile robot needs before it can do anything useful.</p>
+            <div class="proj__stats">
+              <span><b>Real-time</b> inference</span>
+              <span><b>Deep</b> association metric</span>
+            </div>
+            <ul class="proj__tags">
+              <li>YOLOv3</li><li>Deep SORT</li><li>OpenCV</li><li>CNN</li>
+            </ul>
+          </article>
+
+          <article class="proj reveal" data-reveal>
+            <div class="proj__top">
+              <span class="proj__index mono">02</span>
+              <a class="proj__repo" href="https://github.com/tarang-ghetia/Image-Colorization-Using-GAN" target="_blank" rel="noopener" aria-label="View the colorization repository on GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 8.4 22.9c.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17 5 18 5.3 18 5.3c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6A11.5 11.5 0 0 0 12 .5Z"/></svg>
+              </a>
+            </div>
+            <div class="proj__media" aria-hidden="true">
+              <svg viewBox="0 0 400 150" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="pm2g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a3d44"/><stop offset="1" stop-color="#23252b"/></linearGradient>
+                  <linearGradient id="pm2c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b8cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+                </defs>
+                <rect width="200" height="150" fill="url(#pm2g)"/>
+                <rect x="200" width="200" height="150" fill="url(#pm2c)"/>
+                <circle cx="200" cy="60" r="34" fill="rgba(255,255,255,.12)"/>
+                <path d="M150 150 q50 -60 100 0" fill="rgba(255,255,255,.12)"/>
+                <line x1="200" y1="0" x2="200" y2="150" stroke="rgba(255,255,255,.35)" stroke-dasharray="3 4"/>
+                <g font-family="'IBM Plex Mono',monospace" font-size="10"><text x="14" y="138" fill="rgba(255,255,255,.55)">Grayscale</text><text x="322" y="138" fill="rgba(5,7,12,.8)">GAN output</text></g>
+              </svg>
+            </div>
+            <h3 class="proj__title">Image Colorization with GANs</h3>
+            <p class="proj__desc">A generative adversarial pipeline (ResNet-18 + U-Net) that brings
+              grayscale photos back to color, with clearly higher PSNR than the classical baselines.</p>
+            <div class="proj__stats">
+              <span><b>High</b> PSNR</span>
+              <span><b>ResNet-18</b> + U-Net</span>
+            </div>
+            <ul class="proj__tags">
+              <li>GAN</li><li>PyTorch</li><li>ResNet-18</li><li>U-Net</li>
+            </ul>
+          </article>
+
+          <article class="proj reveal" data-reveal>
+            <div class="proj__top">
+              <span class="proj__index mono">03</span>
+              <a class="proj__repo" href="https://github.com/tarang-ghetia/Mathematical-Expression-Localization-in-Handwritten-Document" target="_blank" rel="noopener" aria-label="View the localization repository on GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 8.4 22.9c.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17 5 18 5.3 18 5.3c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6A11.5 11.5 0 0 0 12 .5Z"/></svg>
+              </a>
+            </div>
+            <div class="proj__media" aria-hidden="true">
+              <svg viewBox="0 0 400 150" preserveAspectRatio="xMidYMid slice">
+                <rect width="400" height="150" fill="#0e1119"/>
+                <g fill="rgba(91,140,255,.10)" stroke="rgba(255,255,255,.05)">
+                  <rect x="40" y="30" width="24" height="24"/><rect x="64" y="30" width="24" height="24"/><rect x="88" y="30" width="24" height="24"/>
+                  <rect x="150" y="66" width="24" height="24"/><rect x="174" y="66" width="24" height="24"/>
+                  <rect x="250" y="42" width="24" height="24"/><rect x="274" y="42" width="24" height="24"/><rect x="298" y="42" width="24" height="24"/>
+                </g>
+                <g fill="none" stroke="#22d3ee" stroke-width="2" stroke-dasharray="4 3">
+                  <rect x="36" y="26" width="82" height="32" rx="2"/><rect x="146" y="62" width="56" height="32" rx="2"/><rect x="246" y="38" width="82" height="32" rx="2"/>
+                </g>
+                <text x="40" y="120" fill="rgba(255,255,255,.4)" font-family="'IBM Plex Mono',monospace" font-size="10">U-Net mask · 99.46% val.</text>
+              </svg>
+            </div>
+            <h3 class="proj__title">Handwritten Math-Expression Localization</h3>
+            <p class="proj__desc">A fully convolutional U-Net that finds and segments handwritten
+              math expressions in document images, beating SegNet and ResNet baselines.</p>
+            <div class="proj__stats">
+              <span><b>99.68%</b> training</span>
+              <span><b>99.46%</b> validation</span>
+            </div>
+            <ul class="proj__tags">
+              <li>U-Net</li><li>FCN</li><li>Segmentation</li>
+            </ul>
+          </article>
+
+          <article class="proj reveal" data-reveal>
+            <div class="proj__top">
+              <span class="proj__index mono">04</span>
+              <a class="proj__repo" href="https://github.com/tarang-ghetia/Game-Theory-Based-Stock-Price-Prediction" target="_blank" rel="noopener" aria-label="View the forecasting repository on GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 8.4 22.9c.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17 5 18 5.3 18 5.3c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6A11.5 11.5 0 0 0 12 .5Z"/></svg>
+              </a>
+            </div>
+            <div class="proj__media" aria-hidden="true">
+              <svg viewBox="0 0 400 150" preserveAspectRatio="xMidYMid slice">
+                <defs><linearGradient id="pm4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgba(52,211,153,.35)"/><stop offset="1" stop-color="rgba(52,211,153,0)"/></linearGradient></defs>
+                <rect width="400" height="150" fill="#0e1119"/>
+                <g stroke="rgba(255,255,255,.05)"><path d="M0 40h400M0 80h400M0 120h400"/></g>
+                <path d="M0 118 L60 108 L120 114 L180 78 L240 88 L300 52 L360 40 L400 30 L400 150 L0 150 Z" fill="url(#pm4)"/>
+                <path d="M0 118 L60 108 L120 114 L180 78 L240 88 L300 52 L360 40 L400 30" fill="none" stroke="#34d399" stroke-width="2"/>
+                <g fill="#34d399"><circle cx="180" cy="78" r="3"/><circle cx="300" cy="52" r="3"/><circle cx="360" cy="40" r="3"/></g>
+                <text x="14" y="26" fill="rgba(255,255,255,.5)" font-family="'IBM Plex Mono',monospace" font-size="10">RMSE 5.45 → 3.29 · R² 0.99</text>
+              </svg>
+            </div>
+            <h3 class="proj__title">Game-Theory Stock Forecasting</h3>
+            <p class="proj__desc">A forecasting model that mixes news sentiment with game-theoretic
+              biases to capture how markets actually behave — decision-making under uncertainty.</p>
+            <div class="proj__stats">
+              <span><b>RMSE</b> 5.45 → 3.29</span>
+              <span><b>R²</b> 0.89 → 0.99</span>
+            </div>
+            <ul class="proj__tags">
+              <li>Deep Learning</li><li>Game Theory</li><li>NLP</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="projects__more reveal" data-reveal>
+          More on <a href="https://github.com/tarang-ghetia" target="_blank" rel="noopener">GitHub ↗</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ INTERACTIVE RL DEMO ============ -->
+    <section class="section rl" id="rl-demo">
+      <div class="container">
+        <div class="section__head reveal" data-reveal>
+          <span class="eyebrow"><span class="eyebrow__num">04</span> Interactive</span>
+          <h2 class="section__title">Reinforcement learning, live.</h2>
+          <p class="section__desc">A Q-learning agent training right here in your browser — no video,
+            no pre-baked result. Tiles rise and change color with their learned <strong>state value</strong>,
+            arrows show the greedy <strong>policy</strong>, and the robot drives the best path it has found so far.
+            <span class="rl__hint">Drag to rotate · scroll to zoom.</span></p>
+        </div>
+
+        <div class="rl__stage reveal" data-reveal>
+          <div class="rl__canvas-wrap">
+            <canvas id="rlCanvas" role="img"
+              aria-label="3D gridworld in which a reinforcement-learning agent trains to reach the goal; tile height and color show learned state values."></canvas>
+            <div class="rl__legend" aria-hidden="true">
+              <span class="rl__scale"></span>
+              <div class="rl__scale-labels"><span>low value</span><span>high value</span></div>
+            </div>
+          </div>
+
+          <aside class="rl__panel">
+            <div class="rl__solved" id="rlSolved" hidden>
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>Solved — policy converged</span>
+            </div>
+            <div class="rl__stats">
+              <div class="rl__stat"><span class="rl__stat-num mono" id="rlEpisodes">0</span><span class="rl__stat-label">Episodes</span></div>
+              <div class="rl__stat"><span class="rl__stat-num mono" id="rlEpsilon">1.00</span><span class="rl__stat-label">Epsilon (ε)</span></div>
+              <div class="rl__stat"><span class="rl__stat-num mono" id="rlSteps">—</span><span class="rl__stat-label">Steps / last ep.</span></div>
+              <div class="rl__stat"><span class="rl__stat-num mono" id="rlSuccess">0%</span><span class="rl__stat-label">Success rate</span></div>
+            </div>
+
+            <div class="rl__controls">
+              <button class="btn btn--primary" id="rlTrain" aria-pressed="true">Pause training</button>
+              <button class="btn btn--ghost" id="rlReset">Reset agent</button>
+              <button class="btn btn--ghost" id="rlMaze">New maze</button>
+            </div>
+
+            <dl class="rl__key">
+              <div><dt><span class="rl__dot rl__dot--start"></span> Start</dt><dd>top-left cell</dd></div>
+              <div><dt><span class="rl__dot rl__dot--goal"></span> Goal</dt><dd>reward +1</dd></div>
+              <div><dt><span class="rl__dot rl__dot--wall"></span> Wall</dt><dd>blocked</dd></div>
+            </dl>
+
+            <p class="rl__note mono">Q-learning · α 0.5 · γ 0.95 · ε-greedy decay</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <div class="section__head reveal" data-reveal>
+          <span class="eyebrow"><span class="eyebrow__num">05</span> Experience</span>
+          <h2 class="section__title">Where I've worked</h2>
+        </div>
+
+        <ol class="timeline">
+          <li class="tl tl--now reveal" data-reveal>
+            <div class="tl__marker" aria-hidden="true"></div>
+            <div class="tl__body">
+              <div class="tl__head">
+                <h3 class="tl__role">Research Assistant (HiWi)</h3>
+                <span class="tl__date mono">Oct 2024 – Present</span>
+              </div>
+              <p class="tl__org">RWTH Aachen · ANTS — applied ML for multi-modal spectroscopy &amp; industrial material sorting</p>
+              <ul class="tl__points">
+                <li>Build classification pipelines that sort <strong>7+ materials</strong> — plus finer composition-based sub-classes — from NIR, MIR, FIR and hyperspectral data: <strong>0.91 F1</strong> on live industrial sorting, with material properties read straight from the spectra.</li>
+                <li>Recorded the datasets from scratch: <strong>millions of spectra</strong> captured across varying conditions and hand-annotated, since nothing off-the-shelf fit these materials.</li>
+                <li>Wrote the team's internal tooling — a custom annotation app that cut labeling time, and a graph-generation tool whose plots go into the group's papers.</li>
+                <li>Prototype in the lab; once it proves out, it moves onto the client's production line.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl reveal" data-reveal>
+            <div class="tl__marker" aria-hidden="true"></div>
+            <div class="tl__body">
+              <div class="tl__head">
+                <h3 class="tl__role">Deep-Learning Research Intern</h3>
+                <span class="tl__date mono">Jan – Mar 2024</span>
+              </div>
+              <p class="tl__org">Indian Space Research Organisation (ISRO)</p>
+              <ul class="tl__points">
+                <li>Semantic segmentation of Landsat-8 imagery with U-Net, SegFormer and Barlow-Twin U-Net on the 38-Cloud dataset (18,000+ patches) — <strong>97.04%</strong> accuracy, holding up even on thin clouds and haze.</li>
+                <li>Self-supervised pretraining with Barlow Twins and transformer backbones — Dice <strong>0.8944</strong>, recall pushed to <strong>93.28%</strong> (BT-UNet).</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl reveal" data-reveal>
+            <div class="tl__marker" aria-hidden="true"></div>
+            <div class="tl__body">
+              <div class="tl__head">
+                <h3 class="tl__role">Research Assistant</h3>
+                <span class="tl__date mono">Aug 2022 – Dec 2024</span>
+              </div>
+              <p class="tl__org">Pandit Deendayal Energy University</p>
+              <ul class="tl__points">
+                <li>Led ML projects on environmental forecasting (PM2.5 / PM10), crop and soil quality, and groundwater contamination — LSTM, GRU, transformers and VAR on 18,000+ data points.</li>
+                <li>Backed the forecasts with proper statistics: Granger causality, Johansen cointegration and ADF tests.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl reveal" data-reveal>
+            <div class="tl__marker" aria-hidden="true"></div>
+            <div class="tl__body">
+              <div class="tl__head">
+                <h3 class="tl__role">Full-Stack Developer Intern</h3>
+                <span class="tl__date mono">May – Jul 2023</span>
+              </div>
+              <p class="tl__org">Unitech Technocrats Pvt. Ltd.</p>
+              <ul class="tl__points">
+                <li>Built and maintained a Flask web application, improved the enterprise frontend and hardened authentication through custom API integrations.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section__head reveal" data-reveal>
+          <span class="eyebrow"><span class="eyebrow__num">06</span> Toolbox</span>
+          <h2 class="section__title">Skills &amp; stack</h2>
+        </div>
+
+        <div class="skills__grid">
+          <div class="skillcard reveal" data-reveal>
+            <h3 class="skillcard__title"><span class="mono">01</span> Languages</h3>
+            <ul class="chips"><li>Python</li><li>C++</li><li>C</li><li>SQL</li><li>Prolog</li></ul>
+          </div>
+          <div class="skillcard reveal" data-reveal>
+            <h3 class="skillcard__title"><span class="mono">02</span> ML &amp; Deep Learning</h3>
+            <ul class="chips"><li>PyTorch</li><li>TensorFlow</li><li>Keras</li><li>fast.ai</li><li>Hugging Face</li><li>scikit-learn</li><li>NumPy</li><li>Pandas</li><li>SciPy</li></ul>
+          </div>
+          <div class="skillcard reveal" data-reveal>
+            <h3 class="skillcard__title"><span class="mono">03</span> Computer Vision</h3>
+            <ul class="chips"><li>OpenCV</li><li>YOLO</li><li>Timm</li><li>Pillow</li><li>VoTT</li></ul>
+          </div>
+          <div class="skillcard reveal" data-reveal>
+            <h3 class="skillcard__title"><span class="mono">04</span> Big Data</h3>
+            <ul class="chips"><li>Hadoop</li><li>Spark</li><li>Apache Kafka</li></ul>
+          </div>
+          <div class="skillcard reveal" data-reveal>
+            <h3 class="skillcard__title"><span class="mono">05</span> Web &amp; Backend</h3>
+            <ul class="chips"><li>Flask</li><li>Django</li><li>HTML</li><li>CSS</li></ul>
+          </div>
+          <div class="skillcard reveal" data-reveal>
+            <h3 class="skillcard__title"><span class="mono">06</span> Visualization &amp; Analysis</h3>
+            <ul class="chips"><li>Matplotlib</li><li>Seaborn</li><li>Statistical tests</li></ul>
+          </div>
+        </div>
+
+        <!-- Education + Awards -->
+        <div class="edu-grid">
+          <div class="edu reveal" data-reveal>
+            <h3 class="edu__h"><span class="mono">EDU</span> Education</h3>
+            <div class="edu__item">
+              <div class="edu__row"><strong>M.Sc. Robotic Systems Engineering</strong><span class="mono">GPA 2.2</span></div>
+              <span class="edu__sub">RWTH Aachen · Aachen, Germany</span>
+            </div>
+            <div class="edu__item">
+              <div class="edu__row"><strong>B.Tech Computer Science &amp; Engineering</strong><span class="mono">CGPA 9.83</span></div>
+              <span class="edu__sub">Pandit Deendayal Energy University · 2020 – 2024</span>
+            </div>
+          </div>
+
+          <div class="edu reveal" data-reveal>
+            <h3 class="edu__h"><span class="mono">CRED</span> Awards &amp; certificates</h3>
+            <ul class="cred">
+              <li>Merit-cum-Means scholarship — top 7 in my department</li>
+              <li>1st place, General Knowledge Olympiad (2016 &amp; 2017)</li>
+              <li>Stanford Online — Machine Learning</li>
+              <li>NVIDIA — Deep Learning · Anomaly Detection · Data Engineering</li>
+              <li>IIT Madras — Python for Data Science · Entrepreneurship</li>
+              <li>IIT Roorkee — Product &amp; Brand Management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact__card reveal" data-reveal>
+          <div class="contact__glow" aria-hidden="true"></div>
+          <span class="eyebrow"><span class="eyebrow__num">07</span> Contact</span>
+          <h2 class="contact__title">Let's talk.</h2>
+          <p class="contact__lead">I'm currently looking for robotics and RL positions, and I'm always
+            open to research collaborations. Email is the fastest way to reach me.</p>
+
+          <div class="contact__actions">
+            <a class="btn btn--primary btn--lg" href="mailto:ghetiat@gmail.com" data-copy="ghetiat@gmail.com">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              ghetiat@gmail.com
+            </a>
+            <a class="btn btn--ghost btn--lg" href="Tarang_Ghetia_CV_Optimized_website.pdf" target="_blank" rel="noopener">Download CV</a>
+          </div>
+
+          <ul class="contact__links">
+            <li><span class="mono">Uni</span> <a href="mailto:tarang.ghetia@rwth-aachen.de" data-copy="tarang.ghetia@rwth-aachen.de">tarang.ghetia@rwth-aachen.de</a></li>
+            <li><span class="mono">Git</span> <a href="https://github.com/tarang-ghetia" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><span class="mono">In</span> <a href="https://www.linkedin.com/in/tarang-ghetia-7703731a8/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year">2026</span> Tarang Ghetia</span>
+      <span class="mono">Aachen · Robotics &amp; RL</span>
+      <a href="#hero" class="footer__top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/name-arm.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/rl-demo.js" defer></script>
+</body>
+</html>
