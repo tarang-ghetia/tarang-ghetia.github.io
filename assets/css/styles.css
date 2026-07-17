@@ -395,7 +395,7 @@ html { scrollbar-color: var(--sb-thumb) var(--bg); scrollbar-width: thin; }
 /* =========================================================
    SECTIONS (shared)
    ========================================================= */
-.section { padding: clamp(64px, 10vw, 120px) 0; position: relative; }
+.section { padding: clamp(40px, 5vw, 72px) 0; position: relative; }
 .section__head { max-width: 720px; margin-bottom: var(--sp-8); }
 .eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
